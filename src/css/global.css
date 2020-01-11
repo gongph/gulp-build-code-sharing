@@ -1,0 +1,555 @@
+@charset "utf-8";
+/*!
+ * 重置样式
+ * minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css
+ */
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+i {
+  font-style: normal;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Microsoft YaHei";
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+
+a:hover img {
+  border: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+/**
+ * 全局样式
+ * -----------------------------------------------------
+ */
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.app-container {
+  width: 710px;
+  height: 510px;
+  background-color: #2e2c2b;
+  position: relative;
+  font-size: 12px;
+  color: #948881;
+  overflow: hidden; /* 创建一个 BFC 防止 margin 覆盖*/
+}
+
+.app-container.bg {
+  background: #2e2c2b url(../assets/img/girl.png) no-repeat bottom right;
+}
+
+.app-container.bg:after {
+  content: '022-58329888';
+  font-size: 20px;
+  font-family: "Arial";
+  color: #feea43;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.padding-15 {
+  padding: 15px;
+}
+
+.pt-15 {
+  padding-top: 15px;
+}
+
+.pl-60 {
+  padding-left: 60px
+}
+
+.bfc {
+  overflow: hidden;
+}
+
+.error {
+  color: #F56C6C;
+  display: none;
+  padding-top: 1px;
+}
+
+.error.has-error {
+  display: block;
+}
+
+.button {
+  text-align: center;
+  color: #feee8d;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.button.search,
+.button.refresh {
+  width: 91px;
+  height: 25px;
+  line-height: 25px;
+  background: url(../assets/img/btn90.png) no-repeat center center;
+}
+
+.button.submit {
+  width: 121px;
+  height: 25px;
+  line-height: 20px;
+  background: url(../assets/img/btn.png) no-repeat center center;
+}
+
+.footer {
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  color: #feee8d;
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+}
+
+.outline {
+  outline: 1px dashed red;
+}
+
+/**
+ * 覆盖默认滚动条样式
+ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .5);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(254, 238, 141, 0.5);
+  border-radius: 6px;
+}
+
+/**
+ * 覆盖第三方样式库
+ * ---------------------------------------------------------
+ */
+
+/**
+ * 覆盖chosen默认样式
+ */
+.chosen-container-single .chosen-single {
+  border-radius: 0px;
+  border: 1px solid #363636;
+  background: #211d1b;
+  box-shadow: none;
+  color: #feee8d;
+}
+
+.chosen-container .chosen-drop {
+  border: 1px solid #363636;
+  background: #211d1b;
+  box-shadow: none;
+  color: #feee8d;
+}
+
+.chosen-container .chosen-results {
+  color: #feee8d;
+  max-height: 160px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+  border: 1px solid #363636;
+  box-shadow: none;
+  background: #211d1b;
+}
+
+.chosen-container .chosen-results li.highlighted,
+.chosen-container .chosen-results li.no-results {
+  background: #363636;
+  color: #feee8d;
+}
+
+.chosen-container-single .chosen-search input[type="text"] {
+  color: #feee8d;
+  border: 1px solid #363636;
+}
+
+/**
+ * 覆盖日历样式
+ */
+
+.ui-datepicker {
+  font-size: 12px;
+}
+
+.ui-timepicker-div .ui-widget-header {
+  margin-bottom: 8px;
+}
+
+.ui-timepicker-div dl {
+  text-align: left;
+}
+
+.ui-timepicker-div dl dt {
+  height: 25px;
+  margin-bottom: -25px;
+}
+
+.ui-timepicker-div dl dd {
+  margin: 0px 5px 10px 15px;
+  *margin-left: 10px;
+}
+
+.ui-timepicker-div td {
+  font-size: 90%;
+}
+
+.ui-tpicker-grid-label {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui_tpicker_hour_label,
+.ui_tpicker_minute_label,
+.ui_tpicker_second_label,
+.ui_tpicker_millisec_label,
+.ui_tpicker_time_label {
+  float: left
+}
+
+.ui_tpicker_hour,
+.ui_tpicker_minute,
+.ui_tpicker_second {
+  float: left
+}
+
+.ui-timepicker-div dl .ui_tpicker_time {
+  margin-left: 35px;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+  margin: 0.7em 0
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  float: left;
+}
+
+/**
+ * 头部返回按钮样式
+ * ---------------------------------------------------------
+ */
+
+.nav-back {
+  margin: 10px 0 0 15px;
+}
+
+.nav-back .link {
+  display: inline-block;
+  width: 55px;
+  height: 21px;
+  background: url(../assets/img/back.gif) no-repeat center center;
+}
+
+/**
+ * 面包屑样式
+ * ----------------------------------------------------------
+ */
+
+.bread-crumb a {
+  color: #f5f5f5;
+  cursor: default;
+  pointer-events: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.bread-crumb a.current {
+  color: #feee8d;
+}
+
+/**
+ * 表单容器样式
+ * ----------------------------------------------------------
+ */
+
+.form-wrapper {
+  width: 480px;
+  height: 320px;
+}
+
+/**
+ * 表单样式
+ * ----------------------------------------------------------
+ */
+
+.form-group,
+.form-item-label,
+.form-input-group {
+  position: relative;
+}
+
+.form-item-label,
+.form-input-group {
+  float: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.form-group .extra {
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+}
+
+.form-item-label {
+  width: 100px;
+  min-height: 25px;
+  text-align: right;
+  line-height: 25px;
+}
+
+.form-item-label .required {
+  position: relative;
+}
+
+.form-item-label .required:before {
+  content: '*';
+  position: absolute;
+  left: -8px;
+  top: -2px;
+}
+
+.form-input-group {
+  width: calc(100% - 100px);
+}
+
+.form-input-group .form-input,
+.form-input-group .form-button {
+  width: 223px;
+  min-height: 25px;
+}
+
+.form-input-group .form-input {
+  background: #211d1b;
+  height: 25px;
+  border: 1px solid #363636;
+  float: left;
+  position: relative;
+}
+
+.form-input-group .form-textarea {
+  position: relative;
+  float: left;
+}
+
+.form-input-group .form-input .tooltip,
+.form-input-group .form-textarea .tooltip {
+  position: absolute;
+  z-index: 3;
+  background: #211d1b;
+  padding: 5px;
+  line-height: 1.5;
+  border: 1px solid #363636;
+  pointer-events: none;
+  display: none;
+}
+
+.form-input-group .form-input .tooltip.show,
+.form-input-group .form-textarea .tooltip.show {
+  display: block;
+}
+
+.form-input-group .form-input .tooltip i,
+.form-input-group .form-textarea .tooltip i {
+  color: #F56C6C;
+}
+
+.form-input-group .form-input .error,
+.form-input-group .form-textarea .error {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  color: #F56C6C;
+  display: none;
+}
+
+.form-input-group .form-input .error.has-error,
+.form-input-group .form-textarea .error.has-error {
+  display: block;
+}
+
+.form-input-group .form-input .select {
+  width: 49%;
+  font-size: 12px;
+  background: transparent;
+  border: none;
+  color: #feee8d;
+  cursor: pointer;
+}
+
+.form-input-group .form-button {
+  text-align: center;
+}
+
+.form-input-group .form-input .form-input__inner {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: #feee8d;
+  border: none;
+  outline: none;
+  line-height: 25px;
+}
+
+.form-input-group .form-textarea .form-textarea__inner {
+  width: 223px;
+  height: 130px;
+  background: #211d1b;
+  color: #feee8d;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+/**
+ * 单据提交成功/失败页面样式
+ * -----------------------------------------------
+ */
+
+.notice-wrapper {
+  width: 480px;
+  min-height: 363px;
+}
+
+.notice-wrapper .icon {
+  width: 136px;
+  height: 136px;
+  margin-top: 90px;
+}
+
+.notice-wrapper .icon.success {
+  background: url(../assets/img/success.gif) no-repeat center center;
+}
+
+.notice-wrapper .icon.warning {
+  background: url(../assets/img/warning.gif) no-repeat center center;
+}
+
+.notice-wrapper .tips {
+  text-align: center;
+  font-size: 24px;
+  color: #feee8d;
+}
+
+.notice-wrapper .tips p {
+  margin: 30px 0 20px;
+  padding: 0 10px;
+}
