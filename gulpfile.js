@@ -7,7 +7,7 @@
   'user strict';
   
   const { series, src, dest } = require('gulp');
-  const rimraf = require('gulp-rimraf');
+  const rimraf = require('gulp-rimraf'); // 文件重命名暂时未用到
   const uglify = require('gulp-uglify');
   const rename = require('gulp-rename');
   const cleanCSS = require('gulp-clean-css');
@@ -18,16 +18,8 @@
   const zip = require('gulp-zip');
   const pkg = require('./package.json');
   
-  // 编译目录文件
-  const srcMap = [
-    'assets',
-    'css',
-    'js',
-    'utils',
-    'views'
-  ],
   // 源文件映射文件目录
-  revDir = process.env.NODE_ENV === 'production' ? 'prod' : 'dev',
+  const revDir = process.env.NODE_ENV === 'production' ? 'prod' : 'dev',
   // ZIP压缩包名
   zipName = pkg.name + '.zip';
   
