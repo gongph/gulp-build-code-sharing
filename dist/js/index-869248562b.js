@@ -1,0 +1,1 @@
+!function(n){var r={current:"current"};n(function(){n(".tab").on("click",function(){n(this).addClass(r.current).siblings().removeClass(r.current)})})}(jQuery);

@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.tabs {
+  padding: 15px;
+}
+
+.tabs .tab {
+  width: 158px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../assets/img/tab.jpg);
+  display: inline-block;
+  text-align: center;
+  line-height: 25px;
+  color: #feea43;
+}
+
+.tabs .tab.current {
+  background-image: url(../assets/img/tab_active.jpg);
+}
